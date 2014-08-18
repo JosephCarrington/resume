@@ -22,25 +22,22 @@
 	var mainAbilities = [
 		{
 			heading: "I'm really good at front-end development.",
-			icon: "list-alt",
+			icon: "img/front_end.png",
 			description: "If you give me a design, or even just a style-guide, I can create responsive and best-practices driven websites at lightning speed by using a variety of frameworks on both the front and the back-end to create happy customers and maximize conversions.",
-			callout: "Prove it."
 		},
 		{
 			heading: "I'm a damn fine back-end developer too.",
-			icon: "hdd",
+			icon: "img/back_end.png",
 			description: "I got my start creating custom CMS's from the ground up for small-scale organizations. From this background, I gained a rock-solid foundation in safe and secure ineractivity with the user's browser and data.",
-			callout: "Talk is cheap, make me a believer."
 		},
 		{
 			heading: "I can run a full stack.",
-			icon: "cloud",
+			icon: "img/full_stack.png",
 			description: "From the first server setup to the final polish, I've done it all. I can set up and run a LAMP stack with my eyes closed, and am even branching out into new technologies like Node.js to create even better customer experiences. I can test every aspect of the process to ensure that everything will run smoothly, whether for 100 visitors or one 1,000,000.",
-			callout: "I'd like to see that."
 		},
 		{
 			heading: "I use the latest tech.",
-			icon: "time",
+			icon: "img/new_tech.png",
 			description: "I love to learn new technologies and frameworks. Whatever it is, if I can use it to iterate faster and more robustly, I'll learn it and use it. The way we communicate with people on the internet is constantly evolving, and if a developer gets stuck using one set of ideas, they can quickly become less useful. I try to avoid that by staying up-to-date on deisgn and development trends, and attempting to learn any new technologies I come across.",
 			callout: "Tell me more."
 		}
