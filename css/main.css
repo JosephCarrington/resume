@@ -42,6 +42,12 @@ body
 	font-size: 3em;
 }
 
+#footer
+{
+	padding-top: 10px;
+	color: white;
+}
+
 /* Messing with the Carousel */
 .carousel-caption
 {
@@ -53,4 +59,10 @@ body
 img
 {
 	max-width: 100%;
+}
+
+/* Hacks */
+.navbar
+{
+	margin-bottom: 0px;
 }
