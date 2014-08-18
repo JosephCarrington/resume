@@ -10,6 +10,8 @@
 body
 {
 	text-align: center;
+	background: transparent url('../img/body_bg.png') repeat;
+	background-size: 128px;
 }
 
 .navbar-inverse .brand
@@ -48,9 +50,8 @@ body
 	height: 64px;
 }
 
-#main_abilities .glyphicon
+#why_blurb
 {
-	font-size: 3em;
 }
 
 #footer

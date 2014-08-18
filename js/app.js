@@ -139,7 +139,7 @@
 			{
 				name: "Version Control",
 				rating: 2,
-				description: "I'll fork anything that moves"
+				description: "I'll fork anything that moves."
 			},
 			{
 				name: "Angular.js",
