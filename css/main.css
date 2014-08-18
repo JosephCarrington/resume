@@ -1,0 +1,56 @@
+/* Begin Layout Styling */
+.container-fluid
+{
+	max-width: 900px;
+	background-color: #f2f1eb;
+	box-shadow: 5px 5px 0 0 #e2dfd3;
+	margin-bottom: 30px;
+}
+
+body
+{
+	text-align: center;
+	background: transparent url('../img/body_bg.png') top center repeat;
+}
+
+.navbar-inverse .brand
+{
+	color: #f53221;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#big_ass_top
+{
+	margin: 80px 0;
+}
+
+#header_image
+{
+	max-width: 100%;
+}
+
+#big_ass_top h1
+{
+	font-size: 100px;
+	line-height: 1em;
+	color: #00aeef;
+}
+
+#main_abilities .glyphicon
+{
+	font-size: 3em;
+}
+
+/* Messing with the Carousel */
+.carousel-caption
+{
+	background-color: rgba(0,0,0,0.9);
+	padding:  0 30px 30px;
+}
+
+/* Responsive Declarations */
+img
+{
+	max-width: 100%;
+}
