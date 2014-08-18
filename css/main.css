@@ -36,6 +36,18 @@ body
 	color: #00aeef;
 }
 
+#hello
+{
+	width: 400px;
+	margin-bottom: 30px;
+}
+
+.ability_icon
+{
+	width: 64px;
+	height: 64px;
+}
+
 #main_abilities .glyphicon
 {
 	font-size: 3em;

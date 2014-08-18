@@ -16,13 +16,13 @@
 		</div><!-- .navbar -->
 		<div class="container-fluid">
 			<div id="big_ass_top">
-				<h1>Hello {{resume.hirer}}.</h1>
+				<img id="hello" src="img/hello.png" alt="Hello {{resume.hirer}}" />
 				<p class="lead">My name is <a href='mailto:{{resume.myEmail}}'>{{resume.myNameShort}}</a> and I want to work for you.</p>
 			</div><!-- #big_ass_top -->
 			<section id="main_abilities">
 				<div class="row">
 					<div ng-repeat="ability in resume.abilities" class='col-md-{{12 / resume.abilitiesPerLine}}'>
-						<span class="glyphicon glyphicon-{{ability.icon}}"></span>
+						<img class='ability_icon' ng-src="{{ability.icon}}" />
 						<h2>{{ability.heading}}</h2>
 						<p>{{ability.description}}</p>
 					</div>
