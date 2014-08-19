@@ -61,7 +61,13 @@ body
 	color: white;
 }
 
-/* Sections */
+/* External Links */
+#github-image
+{
+	width: 209px;
+}
+/* Skills */
+
 .skill_stars
 {
 	width: 300px;
