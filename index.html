@@ -19,28 +19,8 @@
 				<img id="hello" src="img/hello.png" alt="Hello {{resume.hirer}}" />
 				<p class="lead">My name is <a href='mailto:{{resume.myEmail}}'>{{resume.myNameShort}}</a> and I want to work for you.</p>
 			</div><!-- #big_ass_top -->
-			<section id="main_abilities">
-				<div class="row">
-					<div ng-repeat="ability in resume.abilities" class='col-md-{{12 / resume.abilitiesPerLine}}'>
-						<img class='ability_icon' ng-src="{{ability.icon}}" />
-						<h2>{{ability.heading}}</h2>
-						<p>{{ability.description}}</p>
-					</div>
-			</section><!-- #main_abilities -->
-			<section id="recent_works" class="row" ng-controller="SlideController as carousel">
-				<div class="col-md-12 text-center">
-					<h2>Some Recent Work</h2>
-					<carousel interval="carousel.interval">
-						<slide ng-repeat="slide in carousel.slides" active="slide.active">
-							<img ng-src="{{slide.image}}" style="margin:auto" />
-							<div class="carousel-caption">
-								<h4><a href="{{slide.link}}">{{slide.client}}</a></h4>
-								<p>{{slide.description}}</p>
-							</div>
-						</slide>
-					</carousel>
-				</div>
-			</section><!-- .recent_works -->
+			<main-abilities></main-abilities>
+			<recent-work></recent-work>
 			<section id="resume" class="row">
 				<div class="col-md-12">
 					<h2>Would you like a resume?</h2>
@@ -48,9 +28,11 @@
 				</div>
 			</section><!-- #resume -->
 			<section id="why" class="row">
-				<div class="col-md-6 col-md-push-3">
+				<div id="why_blurb" class="col-md-4">
 					<h2>Why do I want to work for you?</h2>
 					<p class="lead">Let me count the ways.</p>
+				</div>
+				<div class="col-md-8">
 					<ul class="list-group">
 						<li class="list-group-item" ng-repeat="why in resume.whyYou">
 							<strong>{{why.heading}}</strong>
@@ -59,49 +41,7 @@
 					</ul>
 				</div>
 			</section><!-- #why -->
-			<section id="skills" class="row">
-				<h2>Let me show you my skills.</h2>
-				<div class="col-md-6">
-					<h3>Old Standards</h3>
-					<ul class="list-group">
-						<li ng-repeat="skill in resume.skills[0] | orderBy:'-rating'" class="list-group-item">
-							<h4>{{skill.name}}</h4>
-							<div class="progress">
-								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{skill.rating * 20}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.rating * 20}}%">
-									<span>{{skill.rating * 20}}% Fluent</span>
-								</div>
-							</div>
-							<p>{{skill.description}}</p>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-6">
-					<h3>New Hits</h3>
-					<ul class="list-group">
-						<li ng-repeat="skill in resume.skills[1] | orderBy:'-rating'" class="list-group-item">
-							<h4>{{skill.name}}</h4>
-							<div class="progress">
-								<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{skill.rating * 20}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.rating * 20}}%">
-									<span>{{skill.rating * 20}}% Fluent</span>
-								</div>
-							</div>
-							<p>{{skill.description}}</p>
-						</li>
-					</ul>
-					<h3>Deep Cuts</h3>
-					<ul class="list-group">
-						<li ng-repeat="skill in resume.skills[2]| orderBy: '-rating'" class="list-group-item">
-							<h4>{{skill.name}}</h4>
-							<div class="progress">
-								<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{skill.rating * 20}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.rating * 20}}%">
-									<span>{{skill.rating * 20}}% Fluent</span>
-								</div>
-							</div>
-							<p>{{skill.description}}</p>
-						</li>
-					</ul>
-				</div>
-			</section><!-- #skills -->
+			<skills></skills>
 			<section id="personal" class="row">
 				<div class="col-md-12">
 					<h2>A tweet's worth about me.</h2>

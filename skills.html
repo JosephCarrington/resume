@@ -1,0 +1,31 @@
+<section id="skills" class="row">
+	<h2>Let me show you my skills.</h2>
+	<div class="col-md-6">
+		<h3>Old Standards</h3>
+		<ul class="list-group">
+			<li ng-repeat="skill in skillCtrl.skills[0] | orderBy:'-rating'" class="list-group-item">
+				<h4>{{skill.name}}</h4>
+				<img class="skill_stars" ng-src="img/{{skill.rating}}_stars.png" />
+				<p>{{skill.description}}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h3>New Hits</h3>
+		<ul class="list-group">
+			<li ng-repeat="skill in skillCtrl.skills[1] | orderBy:'-rating'" class="list-group-item">
+				<h4>{{skill.name}}</h4>
+				<img class="skill_stars" ng-src="img/{{skill.rating}}_stars.png" />
+				<p>{{skill.description}}</p>
+			</li>
+		</ul>
+		<h3>Deep Cuts</h3>
+		<ul class="list-group">
+			<li ng-repeat="skill in skillCtrl.skills[2]| orderBy: '-rating'" class="list-group-item">
+				<h4>{{skill.name}}</h4>
+				<img class="skill_stars" ng-src="img/{{skill.rating}}_stars.png" />
+				<p>{{skill.description}}</p>
+			</li>
+		</ul>
+	</div>
+</section><!-- #skills -->

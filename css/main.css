@@ -10,6 +10,9 @@
 body
 {
 	text-align: center;
+	background: transparent url('../img/body_bg.png') repeat;
+	background-size: 128px;
+	background-attachment: fixed;
 }
 
 .navbar-inverse .brand
@@ -48,15 +51,20 @@ body
 	height: 64px;
 }
 
-#main_abilities .glyphicon
+#why_blurb
 {
-	font-size: 3em;
 }
 
 #footer
 {
 	padding-top: 10px;
 	color: white;
+}
+
+/* Sections */
+.skill_stars
+{
+	width: 300px;
 }
 
 /* Messing with the Carousel */
@@ -76,4 +84,5 @@ img
 .navbar
 {
 	margin-bottom: 0px;
+	border-radius: 0;
 }
