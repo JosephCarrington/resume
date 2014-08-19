@@ -1,0 +1,9 @@
+<section id="main_abilities">
+	<div class="row">
+		<div class='col-md-{{12 / abilityCtrl.abilitiesPerLine}}' ng-repeat="ability in abilityCtrl.abilities">
+			<img class='ability_icon' ng-src="{{ability.icon}}" />
+			<h2>{{ability.heading}}</h2>
+			<p>{{ability.description}}</p>
+		</div>
+	</div>
+</section><!-- #main_abilities -->

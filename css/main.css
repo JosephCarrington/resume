@@ -12,6 +12,7 @@ body
 	text-align: center;
 	background: transparent url('../img/body_bg.png') repeat;
 	background-size: 128px;
+	background-attachment: fixed;
 }
 
 .navbar-inverse .brand
@@ -60,6 +61,12 @@ body
 	color: white;
 }
 
+/* Sections */
+.skill_stars
+{
+	width: 300px;
+}
+
 /* Messing with the Carousel */
 .carousel-caption
 {
@@ -77,4 +84,5 @@ img
 .navbar
 {
 	margin-bottom: 0px;
+	border-radius: 0;
 }

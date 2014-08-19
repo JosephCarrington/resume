@@ -8,35 +8,63 @@
 		this.myEmail = "joseph.carrington@gmail.com";
 		this.myTwitter = "http://twitter.com/joe_carrot";
 		this.myLinkedIn = "https://www.linkedin.com/pub/joseph-carrington/97/152/294";
-		this.abilitiesPerLine = 2;
-		this.abilities = mainAbilities;
 		this.whyYou = whyYou;
 		this.skills = skills;
 	});
 
-	app.controller("SlideController", function() {
-		this.slides = recentWork;
-		this.interval = -1;
+	app.directive("mainAbilities", function() {
+		return{
+			restirct: "E",
+			templateUrl: "main-abilities.html",
+			controller: function() {
+				this.abilitiesPerLine = 2;
+				this.abilities = mainAbilities;
+			},
+			controllerAs: "abilityCtrl"
+		};
+	});
+	
+	app.directive("recentWork", function() {
+		return{
+			restrict: "E",
+			templateUrl: "recent-work.html",
+			controller: function() {
+				this.slides = recentWork;
+				this.interval = -1;
+			},
+			controllerAs: "carouselCtrl"
+		};
+	});
+
+	app.directive("skills", function() {
+		return{
+			restrict: "E",
+			templateUrl: "skills.html",
+			controller: function() {
+				this.skills = skills;
+			},
+			controllerAs: "skillCtrl"
+		};
 	});
 	
 	var mainAbilities = [
 		{
-			heading: "I'm really good at front-end development.",
+			heading: "Happy Customers",
 			icon: "img/front_end.png",
 			description: "If you give me a design, or even just a style-guide, I can create responsive and best-practices driven websites at lightning speed by using a variety of frameworks on both the front and the back-end to create happy customers and maximize conversions.",
 		},
 		{
-			heading: "I'm a damn fine back-end developer too.",
+			heading: "Secure Interactivity",
 			icon: "img/back_end.png",
 			description: "I got my start creating custom CMS's from the ground up for small-scale organizations. From this background, I gained a rock-solid foundation in safe and secure ineractivity with the user's browser and data.",
 		},
 		{
-			heading: "I can run a full stack.",
+			heading: "One Million Visitors",
 			icon: "img/full_stack.png",
 			description: "From the first server setup to the final polish, I've done it all. I can set up and run a LAMP stack with my eyes closed, and am even branching out into new technologies like Node.js to create even better customer experiences. I can test every aspect of the process to ensure that everything will run smoothly, whether for 100 visitors or one 1,000,000.",
 		},
 		{
-			heading: "I use the latest tech.",
+			heading: "The Way We Communicate",
 			icon: "img/new_tech.png",
 			description: "I love to learn new technologies and frameworks. Whatever it is, if I can use it to iterate faster and more robustly, I'll learn it and use it. The way we communicate with people on the internet is constantly evolving, and if a developer gets stuck using one set of ideas, they can quickly become less useful. I try to avoid that by staying up-to-date on deisgn and development trends, and attempting to learn any new technologies I come across.",
 			callout: "Tell me more."
@@ -85,7 +113,7 @@
 		},
 		{
 			heading: "We have similar interests.",
-			description: "Your a digital agency and a game company. I'm a person with a lot of experience in the former, and who also wants to take part in the latter."
+			description: "You're a digital agency and a game company. I'm a person with a lot of experience in the former, and who also wants to take part in the latter."
 		},
 		{
 			heading: "I like the cut of your jib.",
@@ -107,7 +135,7 @@
 			{
 				name: "JavaScript",
 				rating: 5,
-				description: "I was writing AJAX when jQuery was learning how to change colors."
+				description: "Everything is an object."
 			},
 			{
 				name: "SQL",
@@ -117,12 +145,12 @@
 			{
 				name: "LAMP Administration",
 				rating: 3,
-				description: "I can set it up and fix problems. It might take me longer than a SYSOPS."
+				description: "I can set it up and fix problems."
 			},
 			{
 				name: "Design",
 				rating: 2,
-				description: "I pay attention to current design trends, but I am more useful coding."
+				description: "I pay attention to current design, but am more useful coding."
 			}
 		],
 		skillsNew = [
@@ -143,13 +171,8 @@
 			},
 			{
 				name: "Angular.js",
-				rating: 2,
+				rating: 3,
 				description: "This resume thing is made with Angular."
-			},
-			{
-				name: "Node.js, Express, MongoDB",
-				rating: 1,
-				description: "I can run a webserver and CRUD a NoSQL DB."
 			}
 		],
 		skillsDeep = [
@@ -161,7 +184,7 @@
 			{
 				name: "Blender",
 				rating: 2,
-				description: "I can create assets for my own projects, and I've taken a few courses."
+				description: "Topology is fun!"
 			}
 		]
 	]
