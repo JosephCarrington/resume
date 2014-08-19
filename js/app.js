@@ -1,8 +1,14 @@
 (function() {
 	var app = angular.module("resume", ["ui.bootstrap"]);
 
-	app.controller("ResumeController", function() {
-		this.hirer = "Chaotic Moon";
+	app.controller("ResumeController", ["$http", function($http) {
+		var resume = this;
+		resume.config = [];
+		$http.get("js/config.js").success(function(data) {
+			resume.config = data;
+		console.log(resume.config);
+		});
+
 		this.nyNameFull = "Joseph Carrington";
 		this.myNameShort = "Joe";
 		this.myEmail = "joseph.carrington@gmail.com";
@@ -10,7 +16,7 @@
 		this.myLinkedIn = "https://www.linkedin.com/pub/joseph-carrington/97/152/294";
 		this.whyYou = whyYou;
 		this.skills = skills;
-	});
+	}]);
 
 	app.directive("mainAbilities", function() {
 		return{
@@ -171,7 +177,7 @@
 			},
 			{
 				name: "Angular.js",
-				rating: 3,
+				rating: 2,
 				description: "This resume thing is made with Angular."
 			}
 		],
